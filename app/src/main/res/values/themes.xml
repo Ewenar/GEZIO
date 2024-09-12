@@ -1,10 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.GEZIO" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/green</item>
-        <item name="colorPrimaryVariant">@color/green</item>
-        <item name="android:statusBarColor">@color/green</item>
+    <style name="Base.Theme.GEZIO" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/gezio_color</item>
+        <item name="colorPrimaryVariant">@color/gezio_color</item>
+        <item name="android:statusBarColor">@color/gezio_color</item>
     </style>
 
     <style name="Theme.GEZIO" parent="Base.Theme.GEZIO" />
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ThemeOverlay.SearchView" parent="">
+        <item name="android:editTextColor">@color/gray</item>
+        <item name="android:textColorHint">#8F8787</item>
+    </style>
 </resources>

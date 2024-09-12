@@ -1,16 +1,694 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ScheduleFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/linear1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="schedule"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_gravity="start"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            android:paddingLeft="20dp"
+            android:text="@string/may10"
+            android:shadowColor="@color/gray"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="20"
+            style="@style/InterFont"
+            android:textSize="26sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            app:cardCornerRadius="16dp"
+            android:contextClickable="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/gripinphoto"
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/gripin2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/titlegripin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="Gripin "
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/gripinphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/gripinphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gripinphoto"
+                    app:layout_constraintTop_toTopOf="@+id/gripinphoto"
+                    app:layout_constraintVertical_bias="0.67" />
+
+                <TextView
+                    android:id="@+id/dategripin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="260dp"
+                    android:text="20.00"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/gripinphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/gripinphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gripinphoto"
+                    app:layout_constraintTop_toTopOf="@+id/gripinphoto"
+                    app:layout_constraintVertical_bias="0.69" />
+
+                <TextView
+                    android:id="@+id/placegripin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="26dp"
+                    android:text="Bartın / Kültür Merkezi"
+                    android:textColor="@color/acıkgri"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/gripinphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/gripinphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gripinphoto"
+                    app:layout_constraintTop_toTopOf="@+id/gripinphoto"
+                    app:layout_constraintVertical_bias="0.85" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/teomanphoto"
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/teoman2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/titleteoman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="Teoman "
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/teomanphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/teomanphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/teomanphoto"
+                    app:layout_constraintTop_toTopOf="@+id/teomanphoto"
+                    app:layout_constraintVertical_bias="0.67" />
+
+                <TextView
+                    android:id="@+id/dateteoman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="260dp"
+                    android:text="22.00"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/teomanphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/teomanphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/teomanphoto"
+                    app:layout_constraintTop_toTopOf="@+id/teomanphoto"
+                    app:layout_constraintVertical_bias="0.69" />
+
+                <TextView
+                    android:id="@+id/placeteoman"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="26dp"
+                    android:text="İstanbul / Harbiye"
+                    android:textColor="@color/acıkgri"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/teomanphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/teomanphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/teomanphoto"
+                    app:layout_constraintTop_toTopOf="@+id/teomanphoto"
+                    app:layout_constraintVertical_bias="0.85" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:gravity="center"
-        android:textColor="@color/soft_blue"
-        android:textSize="36sp"/>
-</FrameLayout>
+        app:layout_constraintTop_toBottomOf="@id/linear1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/may12"
+            android:shadowColor="@color/gray"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="20"
+            android:layout_marginTop="30dp"
+            android:textSize="26sp"
+            android:paddingLeft="20dp"
+            style="@style/InterFont"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/mvophoto"
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/morveotesi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/titlemvo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="Mor ve Ötesi"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/mvophoto"
+                    app:layout_constraintEnd_toEndOf="@+id/mvophoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/mvophoto"
+                    app:layout_constraintTop_toTopOf="@+id/mvophoto"
+                    app:layout_constraintVertical_bias="0.67" />
+
+                <TextView
+                    android:id="@+id/datemvo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="260dp"
+                    android:text="21.30"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/mvophoto"
+                    app:layout_constraintEnd_toEndOf="@+id/mvophoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/mvophoto"
+                    app:layout_constraintTop_toTopOf="@+id/mvophoto"
+                    app:layout_constraintVertical_bias="0.69" />
+
+                <TextView
+                    android:id="@+id/placemvo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="26dp"
+                    android:text="Ankara / If Performance"
+                    android:textColor="@color/acıkgri"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/mvophoto"
+                    app:layout_constraintEnd_toEndOf="@+id/mvophoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/mvophoto"
+                    app:layout_constraintTop_toTopOf="@+id/mvophoto"
+                    app:layout_constraintVertical_bias="0.85" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/metallicaphoto"
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/metallica2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/titlemetallica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="Metallica"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/metallicaphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/metallicaphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/metallicaphoto"
+                    app:layout_constraintTop_toTopOf="@+id/metallicaphoto"
+                    app:layout_constraintVertical_bias="0.67" />
+
+                <TextView
+                    android:id="@+id/datemetallica"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="260dp"
+                    android:text="23.00"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/metallicaphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/metallicaphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/metallicaphoto"
+                    app:layout_constraintTop_toTopOf="@+id/metallicaphoto"
+                    app:layout_constraintVertical_bias="0.69" />
+
+                <TextView
+                    android:id="@+id/placemetallica"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="26dp"
+                    android:text="İstanbul / Volkswagen Arena"
+                    android:textColor="@color/acıkgri"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/metallicaphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/metallicaphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/metallicaphoto"
+                    app:layout_constraintTop_toTopOf="@+id/metallicaphoto"
+                    app:layout_constraintVertical_bias="0.85" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/senasenerphoto"
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/sena2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/senasenertitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="Sena Şener"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/senasenerphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/senasenerphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/senasenerphoto"
+                    app:layout_constraintTop_toTopOf="@+id/senasenerphoto"
+                    app:layout_constraintVertical_bias="0.67" />
+
+                <TextView
+                    android:id="@+id/datesenasener"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="260dp"
+                    android:text="22.00"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/senasenerphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/senasenerphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/senasenerphoto"
+                    app:layout_constraintTop_toTopOf="@+id/senasenerphoto"
+                    app:layout_constraintVertical_bias="0.69" />
+
+                <TextView
+                    android:id="@+id/placesenasener"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="26dp"
+                    android:text="Kocaeli / Hayal Kahvesi"
+                    android:textColor="@color/acıkgri"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/senasenerphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/senasenerphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/senasenerphoto"
+                    app:layout_constraintTop_toTopOf="@+id/senasenerphoto"
+                    app:layout_constraintVertical_bias="0.85" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/linear2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/may20"
+            android:shadowColor="@color/gray"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="20"
+            android:layout_marginTop="30dp"
+            android:textSize="26sp"
+            android:paddingLeft="20dp"
+            style="@style/InterFont"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView6"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/sezenaksuphoto"
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/sezenaksu"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/sezenaksutitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="Sezen Aksu"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/sezenaksuphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/sezenaksuphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/sezenaksuphoto"
+                    app:layout_constraintTop_toTopOf="@+id/sezenaksuphoto"
+                    app:layout_constraintVertical_bias="0.67" />
+
+                <TextView
+                    android:id="@+id/datesezenaksu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="260dp"
+                    android:text="20.00"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/sezenaksuphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/sezenaksuphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/sezenaksuphoto"
+                    app:layout_constraintTop_toTopOf="@+id/sezenaksuphoto"
+                    app:layout_constraintVertical_bias="0.69" />
+
+                <TextView
+                    android:id="@+id/placesezenaksu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="26dp"
+                    android:text="Çorlu / Cumhuriyet Parkı"
+                    android:textColor="@color/acıkgri"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sezenaksuphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/sezenaksuphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/sezenaksuphoto"
+                    app:layout_constraintTop_toTopOf="@+id/sezenaksuphoto"
+                    app:layout_constraintVertical_bias="0.85" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView7"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/yakisikliphoto"
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/yakisikli"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/yakisiklititle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:text="Yakışıklı Güvenlik"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/yakisikliphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/yakisikliphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/yakisikliphoto"
+                    app:layout_constraintTop_toTopOf="@+id/yakisikliphoto"
+                    app:layout_constraintVertical_bias="0.67" />
+
+                <TextView
+                    android:id="@+id/dateyakisikli"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="260dp"
+                    android:text="20.00"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="@+id/yakisikliphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/yakisikliphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/yakisikliphoto"
+                    app:layout_constraintTop_toTopOf="@+id/yakisikliphoto"
+                    app:layout_constraintVertical_bias="0.69" />
+
+                <TextView
+                    android:id="@+id/placeyakisikli"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="26dp"
+                    android:text="Sakarya / Del Lago Hotel"
+                    android:textColor="@color/acıkgri"
+                    android:shadowColor="@color/black"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="7"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/yakisikliphoto"
+                    app:layout_constraintEnd_toEndOf="@+id/yakisikliphoto"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/yakisikliphoto"
+                    app:layout_constraintTop_toTopOf="@+id/yakisikliphoto"
+                    app:layout_constraintVertical_bias="0.85" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView6">
+
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

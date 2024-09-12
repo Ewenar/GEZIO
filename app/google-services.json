@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "998600608724",
+    "project_id": "gezio-ecf66",
+    "storage_bucket": "gezio-ecf66.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998600608724:android:01c39bc968051852dfe441",
+        "android_client_info": {
+          "package_name": "com.gezioteam.gezio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpQ0JpQ6slojgos2avNhXY1L321ekbDc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
